@@ -255,7 +255,7 @@ c<!DOCTYPE html>
       return Math.max(min, Math.min(max, n));
     }
 
-    function moveNo(px, py) {
+    function (px, py) {
       const z = zone.getBoundingClientRect();
       const b = noBtn.getBoundingClientRect();
 
@@ -265,8 +265,8 @@ c<!DOCTYPE html>
       dx /= mag;
       dy /= mag;
 
-      let newLeft = (b.left - z.left) + dx * 150;
-      let newTop  = (b.top - z.top) + dy * 150;
+      let newLeft = (b.left - z.left) + dx * 260;
+      let newTop  = (b.top - z.top) + dy * 260;
 
       newLeft = clamp(newLeft, 0, z.width - b.width);
       newTop  = clamp(newTop, 0, z.height - b.height);
@@ -284,7 +284,7 @@ c<!DOCTYPE html>
         (b.left + b.width / 2) - e.clientX,
         (b.top + b.height / 2) - e.clientY
       );
-      if (d < 140) moveNo(e.clientX, e.clientY);
+      if (d < 220) moveNo(e.clientX, e.clientY);
     });
 
     noBtn.addEventListener("click", e => e.preventDefault());
@@ -300,6 +300,7 @@ c<!DOCTYPE html>
   </script>
 </body>
 </html>
+
 
 
 
